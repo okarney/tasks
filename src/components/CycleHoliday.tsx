@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 export function CycleHoliday(): JSX.Element {
     const [holiday, setHoliday] = useState<string>("🌲");
 
-    function alphabetical(): void {
+    function alphabeticalChange(): void {
         if (holiday === "🌲") {
             setHoliday("🎃");
         } else if (holiday === "🎃") {
@@ -39,7 +39,7 @@ export function CycleHoliday(): JSX.Element {
         <div>
             <span>Holiday: {holiday}</span>
             <br></br>
-            <Button onClick={alphabetical}>Advance by Alphabet</Button>
+            <Button onClick={alphabeticalChange}>Advance by Alphabet</Button>
             <Button onClick={byDate}>Advance by Year</Button>
         </div>
     );
